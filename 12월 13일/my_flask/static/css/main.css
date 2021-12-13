@@ -1,0 +1,34 @@
+@import url(//fonts.googleapis.com/earlyaccess/kopubbatang.css);
+
+@keyframes fadeIn {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
+}
+
+body {
+    width: 1000px;
+    height: 737px;
+    background: linear-gradient(45deg, #323232, #5a5a5a, #787878, #aaaaaa 60%,#a0a0a0, #c8c8c8, #dcdcdc);
+}
+
+
+.header {
+    animation-name: fadeIn;
+	animation-duration: 3s;
+    padding-top: 50px;
+    padding-left: 505px;
+    font-family: 'KoPub Batang', serif;
+}
+
+.header h1 {
+    text-align: center;
+    font-size: 100px;
+    font-weight: 700;
+    font-style: italic;
+    color: #FFEB46;
+    text-justify: auto;
+}
