@@ -33,13 +33,15 @@ def kma():
   for location in soup.select("location"):
     # 내부의 city, wf, tmn, tmx, tmEf 태그를 찾아 출력합니다.
     output += "<h3>{}</h3>".format(location.select_one("city").string)
+    output += "날짜: {}</br>".format(location.select_one("tmEf").string)
     output += "날씨: {}</br>".format(location.select_one("wf").string)
     output += "최저/최고 기온: {}/{}".format(location.select_one("tmn").string, location.select_one("tmx").string)
     output += "<hr/>"  
  
   output += "{}</br>".format(soup.select_one("title").string)
-  output += "날짜: {}</br>".format(location.select_one("tmEf").string)  
   output += "지역: {}</br>".format(soup.select_one("province").string)
+  output += "날짜: {}</br>".format(location.select_one("tmEf").string)  
+  
  
   return output
 
@@ -66,8 +68,9 @@ def kma1():
     output += "<hr/>"
  
   output += "{}</br>".format(soup.select_one("title").string)
-  output += "날짜: {}</br>".format(location.select_one("tmEf").string)  
   output += "지역: {}</br>".format(soup.select_one("province").string)
+  output += "날짜: {}</br>".format(location.select_one("tmEf").string)  
+  
  
   return output
 
